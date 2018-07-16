@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="City" representedClassName="City" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="temperatures" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Temperature" inverseName="city" inverseEntity="Temperature" syncable="YES"/>
+    </entity>
+    <entity name="Temperature" representedClassName="Temperature" syncable="YES">
+        <attribute name="actualTemperature" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maximumTemperature" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="minimumTemperature" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="temperatureDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="temperatureDateString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weatherDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="City" inverseName="temperatures" inverseEntity="City" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="City" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Temperature" positionX="-54" positionY="36" width="128" height="150"/>
+    </elements>
+</model>
